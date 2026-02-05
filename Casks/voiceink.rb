@@ -9,6 +9,11 @@ cask "voiceink" do
 
   app "VoiceInk.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/VoiceInk.app"]
+  end
+
   zap trash: [
     "~/Library/Caches/com.prakashjoshipax.VoiceInk",
     "~/Library/Preferences/com.prakashjoshipax.VoiceInk.plist",
