@@ -1,6 +1,6 @@
 cask "ghostty-osc1337" do
-  version "1.3.2-osc1337.2"
-  sha256 "e813571c9f94e9a19b97151ad28a32dd1435101a54633f704fd62e74870c1784"
+  version "1.3.1-osc1337.1"
+  sha256 "065dad1031ad2dbda8e4e2eaa12aed7f5963ff8ca5d86b425c5b171e4755be0e"
 
   url "https://github.com/debdutgoswami/ghostty/releases/download/v#{version}/Ghostty-#{version}.zip"
   name "Ghostty (OSC 1337 patched)"
