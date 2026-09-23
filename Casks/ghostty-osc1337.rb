@@ -11,9 +11,8 @@ cask "ghostty-osc1337" do
 
   app "Ghostty.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Ghostty.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Ghostty.app"]
   end
 
   zap trash: [

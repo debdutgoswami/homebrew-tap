@@ -9,9 +9,8 @@ cask "voiceink" do
 
   app "VoiceInk.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/VoiceInk.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/VoiceInk.app"]
   end
 
   zap trash: [
